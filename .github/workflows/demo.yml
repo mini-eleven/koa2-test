@@ -18,7 +18,7 @@ jobs:
         node-version: [12.x, 14.x, 16.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
-    steps:
+    steps: # 每个 - 是一个step, 可用第三方, 如 actions/* , 可自定义,  name可空
     - uses: actions/checkout@v3
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
