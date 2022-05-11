@@ -6,11 +6,7 @@ name: demo
 on:
   push:
     branches: [ master ]
-  paths:
-    branches: 
-      - 'github/workflows/**'
-      - '_test_/**'
-      - 'src/**' 
+    paths: [ 'github/workflows/**', '_test_/**', 'src/**' ]
 
 jobs:
   build:
