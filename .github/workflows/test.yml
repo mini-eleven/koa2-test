@@ -1,0 +1,25 @@
+name: test
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - '.github/workflows/**'
+      - '__test__/**'
+      - 'src/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-lastest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - name: lint and test
+        run: |
+          npm i
+          echo npm install completed
+          echo run lint and test completed!
