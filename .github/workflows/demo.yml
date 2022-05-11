@@ -7,7 +7,10 @@ on:
   push:
     branches: [ master ]
   paths:
-    branches: [ 'github/workflows/**', '_test_/**', 'src/**' ]
+    branches: 
+      - 'github/workflows/**'
+      - '_test_/**'
+      - 'src/**' 
 
 jobs:
   build:
